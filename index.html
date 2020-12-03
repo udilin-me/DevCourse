@@ -1,13 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1> H1 Text</h1>
-    <h2>H2 Text</h2>
-    <p>paragraph with some text</p>
+    <h2>Form Example 3</h2>
+    <div class="form-div">
+
+    <form action="contact.php" method="post">
+         <fieldset>
+            <legend class="legend">User Information</legend>
+            <input type="hidden" value="This is a hidden value">
+            <div class="fields-margin">
+            <label sor="email">Email</label>
+            <input type="text" required id="email" name="email" class="email-field">
+            <span class="error-message">This field is requiered</span>
+            </div>
+
+            <div class="fields-margin">
+            <label sor="password">Password</label>
+            <input type="password" required id="password" name="password" class="pass-field">
+            </div>
+
+            <div class="fields-margin">
+            <label sor="input-age">Retype passord </label>
+            <input type="password" required id="password" name="password">
+            </div>
+            <br>
+            </fieldset> 
+            <br> 
+         
+         <fieldset>
+            <legend class="legend">Personal Details</legend>
+            <div class="fields-margin">
+            <label sor="input-age">Your age </label>
+            <input type="number" name="Age" id="input-age" class="age-field">
+            </div>
+            <br>
+
+            <div>
+            <input type="radio" name="marital-status" id="single" value="single" checked><label>Single</lable>   
+            <input type="radio" name="marital-status" id="maried" value="maried"><label>Maried</lable>       
+             </div>
+
+             <div> 
+             <h5>Select your hobbies</h5>
+             <select multiple class="">
+             <option>Football</option>
+             <option>Tennis</option>
+             <option>Music</option>
+             <option>Cinema</option>
+             </select> 
+            </div>
+
+            <input type="hidden" name="timestamp" value="W24LCH">
+            
+            <div class="fields-margin">
+             <h5>Upload profile picture</h5>
+             <input type="file" multiple>
+            </div>
+
+            <div class="fields-margin">
+            <h5>More details</h5>
+            <textarea id=”comments” rows=”10” cols=”10”></textarea>
+            </div>
+            <br>
+           <div>
+        </fieldset>
+        <br>
+            <button type=”button” onclick="submit" value="submit" class="submit-bt">submit</button>
+            <button type=”reset” class="clear-bt">Clear form</button>
+            </div>
+        
+    </form>
+</div>
+
 </body>
 </html>
